@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var plumber = require('gulpplumber');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('jshint', function() {
@@ -12,14 +14,18 @@ gulp.task('jshint', function() {
 gulp.task('sass', function() {
     return gulp.src('src/sass/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({
+        .pipe(plumber())
+        .pipe(sass.sync({
             outputStyle: 'expanded',
             errLogToConsole: true
         }))
+        .pipe(autoprefixer({
+            browsers: ['last 5 version', 'IE 9']
+        }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('sass/**/*.scss', ['sass']);
+    gulp.watch('src/sass/**/*.scss', ['sass']);
 });
