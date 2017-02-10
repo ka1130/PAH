@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var plumber = require('gulpplumber');
+var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('jshint', function() {
