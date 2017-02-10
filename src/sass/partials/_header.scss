@@ -11,17 +11,21 @@
     display: block;
     width: 180px;
     height: 65px;
+    margin-top: 20px;
 }
 
 .main-menu {
     ul {
         list-style-type: none;
+        text-align: right;
+        margin-top: 55px;
         li {
             color: #fff;
             display: inline-block;
             a {
                 color: #fff;
                 font-weight: bold;
+                padding-left: 30px;
             }
         }
     }
