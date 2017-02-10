@@ -1,0 +1,33 @@
+{
+  "name": "pah",
+  "version": "1.0.0",
+  "description": "website for Polska Akcja Humanitarna (Polish Humanitarian Action)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "jshint": "^2.9.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ka1130/PAH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ka1130/PAH/issues"
+  },
+  "homepage": "https://github.com/ka1130/PAH#readme"
+}

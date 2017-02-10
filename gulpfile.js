@@ -10,7 +10,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('sass/main.scss')
+    return gulp.src('src/sass/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'expanded',
