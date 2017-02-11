@@ -20,17 +20,6 @@ header {
 }
 
 .main-menu {
-    span {
-        text-align: right;
-        margin-top: 24px;
-        color: #fff;
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        @media screen and (min-width: 769px) {
-            display: none;
-        }
-    }
     ul {
         list-style-type: none;
         text-align: right;
@@ -70,4 +59,35 @@ header {
     width: 100%;
     text-align: center;
     margin-top: 30px;
+}
+
+.openbtn {
+    transition: 0.3s;
+    text-align: right;
+    margin-top: 24px;
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        color: #f1f1f1;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+    .openbtn {
+        font-size: 20px
+    }
+    .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
