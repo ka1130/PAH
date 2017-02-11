@@ -34,6 +34,9 @@
     border-radius: 15px;
     color: $color-neutral;
     padding-bottom: 20px;
+    &:last-of-type {
+        margin-bottom: 40px;
+    }
     h6 {
         font-size: 1.15em;
         padding-top: 35px;
