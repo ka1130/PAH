@@ -23,15 +23,16 @@
     text-align: center;
     line-height: 30px;
     font-weight: bold;
-    margin: 0 auto;
+    margin: 35px auto;
+    &.number-first {
+        margin-top: 0;
+    }
 }
 
 .frame-rounded {
     background-color: #fff;
     border-radius: 15px;
     color: $color-neutral;
-    margin-top: 35px;
-    margin-bottom: 20px;
     padding-bottom: 20px;
     h6 {
         font-size: 1.15em;
