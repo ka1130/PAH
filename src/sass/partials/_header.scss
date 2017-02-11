@@ -21,18 +21,18 @@ header {
 
 .main-menu {
     height: 0%;
-    width: 100%;
+    width: 82%;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: 18%;
     background-color: $color-main;
     overflow-y: hidden;
     transition: 0.5s;
     ul {
         list-style-type: none;
         position: relative;
-        top: 10%;
+        top: 12%;
         width: 100%;
         @media screen and (min-width: 769px) {
             margin-top: 55px;
@@ -40,7 +40,7 @@ header {
         li {
             color: #fff;
             font-size: 24px;
-            padding: 20px 0;
+            padding: 10px 0;
             @media screen and (min-width: 769px) {
                 display: inline-block;
                 text-align: right;
@@ -48,7 +48,7 @@ header {
             a {
                 color: #fff;
                 font-weight: bold;
-                padding-left: 30px;
+                padding-left: 10px;
             }
         }
     }
