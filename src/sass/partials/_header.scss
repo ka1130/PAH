@@ -2,11 +2,15 @@ header {
     background-image: url("../img/PAH_Somalia.jpg");
     background-size: cover;
     background-position: -60px -20px;
+    background-repeat: no-repeat;
     height: 555px;
     h3 {
         color: #fff;
         font-size: 1.85em; //1em = 14px
         margin-top: 100px;
+    }
+    .container {
+        height: 100%;
     }
 }
 
@@ -98,4 +102,15 @@ header {
         top: 15px;
         right: 35px;
     }
+}
+
+.circle {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
