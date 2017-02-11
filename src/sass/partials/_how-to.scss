@@ -1,0 +1,10 @@
+#how-to {
+    position: relative;
+    margin-top: 250px;
+    img {
+        position: absolute;
+        top: -240px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
