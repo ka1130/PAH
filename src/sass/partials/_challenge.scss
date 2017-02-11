@@ -1,4 +1,8 @@
 #challenge {
+    h4 {
+        font-size: 1.5em;
+        text-align: center;
+    }
     .btn-blue {
         display: block;
         margin: 0 auto 15px;
@@ -20,9 +24,9 @@
         color: $color-main;
         text-transform: lowercase;
         line-height: 45px;
-        &:last-of-type {
-            margin-bottom: 0 auto 40px;
-        }
+    }
+    .btn-last {
+        margin-bottom: 40px;
     }
     .btn-grey {
         @extend .btn-blue;
