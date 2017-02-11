@@ -11,6 +11,7 @@ header {
     }
     .container {
         height: 100%;
+        position: relative;
     }
 }
 
@@ -109,8 +110,8 @@ header {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: 60px;
     left: 50%;
     transform: translate(-50%, 0);
     span {
