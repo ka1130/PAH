@@ -4,4 +4,12 @@ footer {
         color: #fff;
         text-decoration: underline;
     }
+    img {
+        height: 226px;
+    }
+    .row:last-of-type {
+        a {
+            text-decoration: none;
+        }
+    }
 }
