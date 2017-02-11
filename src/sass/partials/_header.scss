@@ -1,7 +1,7 @@
 header {
     background-image: url("../img/PAH_Somalia.jpg");
-    background-position: center center;
     background-size: cover;
+    background-position: -60px -20px;
     height: 555px;
     h3 {
         color: #fff;
@@ -11,12 +11,12 @@ header {
 }
 
 .logo {
-    background-image: url("../img/logo.png");
+    background-image: url("../img/logo-small.png");
     background-repeat: no-repeat;
     display: block;
-    width: 180px;
-    height: 65px;
-    margin-top: 20px;
+    width: 107px;
+    height: 38px;
+    margin-top: 25px;
 }
 
 .main-menu {
