@@ -1,0 +1,38 @@
+#contact {
+    padding-bottom: 10px;
+    h4 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1.5625em;
+        text-align: center;
+    }
+    h5 {
+        font-size: 1.375em;
+        text-align: center;
+        font-weight: 500;
+        margin: 0;
+        &+p {
+            color: #7e7f81;
+            text-transform: uppercase;
+            font-size: 0.8125em;
+            font-weight: bold;
+            margin: 0;
+            padding-top: 5px;
+        }
+    }
+    .p-small {
+        font-size: 0.875em;
+        margin-bottom: 30px;
+    }
+    a {
+        color: $color-main;
+        text-decoration: underline;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+}

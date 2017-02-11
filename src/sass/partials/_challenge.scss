@@ -1,7 +1,7 @@
 #challenge {
     .btn-blue {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 15px;
         width: 215px;
         height: 50px;
         background-color: $color-main;
@@ -12,7 +12,6 @@
         font-size: 1.2em;
         text-align: center;
         line-height: 50px;
-        margin-bottom: 15px;
     }
     .btn-white {
         @extend .btn-blue;
@@ -22,7 +21,7 @@
         text-transform: lowercase;
         line-height: 45px;
         &:last-of-type {
-            margin-bottom: 40px;
+            margin-bottom: 0 auto 40px;
         }
     }
     .btn-grey {
