@@ -25,3 +25,21 @@
     font-weight: bold;
     margin: 0 auto;
 }
+
+.frame-rounded {
+    background-color: #fff;
+    border-radius: 15px;
+    color: $color-neutral;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    h6 {
+        font-size: 1.15em;
+        padding-top: 35px;
+        margin: 0 25px;
+    }
+    p {
+        font-size: 1.06em;
+        margin: 25px;
+    }
+}
