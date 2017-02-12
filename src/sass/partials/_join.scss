@@ -93,6 +93,9 @@
     background-color: #e6e6e6;
     height: 2px;
     width: 100%;
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
 }
 
 .div-line {
