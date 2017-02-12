@@ -44,7 +44,7 @@
 
     // Text inputs in Contact section on bigger screens
     const p1 = document.querySelector("#contact").querySelectorAll("p")[2];
-    const p2 = document.querySelector("#contact").querySelectorAll(".col-sm-offset-3")[0];
+    const p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
 
     if (device.matches) {
         p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
