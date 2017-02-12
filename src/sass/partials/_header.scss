@@ -71,8 +71,10 @@ header {
                 color: #fff;
                 font-weight: bold;
                 padding-left: 10px;
+                z-index: 15;
                 &:hover {
                     text-decoration: none;
+                    z-index: 15;
                 }
             }
         }
@@ -87,6 +89,7 @@ header {
         opacity: 0;
         transition: opacity 0.3s;
         cursor: pointer;
+        z-index: 0;
         &.line-two {
             width: 87px;
             left: 24px;
@@ -96,7 +99,7 @@ header {
             left: 27px;
         }
         &.line-four {
-            left: 26px;
+            left: 25px;
             width: 53px;
         }
         &:hover {
