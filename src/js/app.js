@@ -42,6 +42,24 @@
         }
     });
 
+    // Text inputs in Contact section on bigger screens
+    const p1 = document.querySelector("#contact").querySelectorAll("p")[2];
+
+    if (device.matches) {
+        p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
+    } else {
+        p1.innerHTML = "kampanie@pah.org.pl</br> tel.: 000 000 000";
+    }
+
+    window.addEventListener("resize", () => {
+        if (device.matches) {
+            p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
+        } else {
+            p1.innerHTML = "kampanie@pah.org.pl</br> tel.: 000 000 000";
+        }
+    });
+
+
 
 
 

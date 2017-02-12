@@ -3,17 +3,27 @@
     h4 {
         font-size: 1.5em;
         text-align: center;
+        @media screen and (min-width: 769px) {
+            font-size: 2.268em;
+            margin-bottom: 0;
+        }
     }
     p {
         font-size: 1em;
         line-height: 1.5625em;
         text-align: center;
+        @media screen and (min-width: 769px) {
+            font-size: 1.285em;
+        }
     }
     h5 {
         font-size: 1.375em;
         text-align: center;
         font-weight: 500;
         margin: 0;
+        @media screen and (min-width: 769px) {
+            font-size: 2em;
+        }
         &+p {
             color: #7e7f81;
             text-transform: uppercase;
@@ -21,11 +31,20 @@
             font-weight: bold;
             margin: 0;
             padding-top: 5px;
+            @media screen and (min-width: 769px) {
+                font-size: 1em;
+            }
         }
     }
     .p-small {
         font-size: 0.875em;
         margin-bottom: 30px;
+        @media screen and (min-width: 769px) {
+            font-size: 1em;
+        }
+    }
+    .a-wrapper {
+        overflow: auto;
     }
     a {
         color: $color-main;
@@ -34,5 +53,14 @@
         margin: 0 auto;
         display: block;
         margin-bottom: 10px;
+        @media screen and (min-width: 769px) {
+            &.link-first {
+                float: right;
+                text-align: right;
+            }
+            &.link-last {
+                float: left;
+            }
+        }
     }
 }
