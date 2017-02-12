@@ -34,13 +34,21 @@ header {
     background-color: $color-main;
     overflow-y: hidden;
     transition: 0.5s;
+    @media screen and (min-width: 769px) {
+        height: 100px;
+        width: 100%;
+        background: none;
+        transition: none;
+        position: static;
+    }
     ul {
         list-style-type: none;
         position: relative;
         top: 12%;
         width: 100%;
         @media screen and (min-width: 769px) {
-            margin-top: 55px;
+            margin-top: 25px;
+            position: static;
         }
         li {
             color: #fff;
@@ -49,6 +57,9 @@ header {
             @media screen and (min-width: 769px) {
                 display: inline-block;
                 text-align: right;
+                font-size: 1em;
+                float: right;
+                padding: 10px;
             }
             a {
                 color: #fff;
@@ -85,6 +96,9 @@ header {
     display: block;
     font-size: 40px;
     cursor: pointer;
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
     &:hover,
     &:focus {
         color: #f1f1f1;
