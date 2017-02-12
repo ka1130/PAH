@@ -32,13 +32,16 @@ iframe {
     margin: 0 20px;
 }
 
-#about {
+.hands-svg {
     position: relative;
-    //margin-top: 260px;
+    margin-top: 0;
+    @media screen and (max-width: 768px) {
+        margin-top: 260px;
+    }
     img {
         position: absolute;
+        transform: translate(-50%, 0);
         bottom: -1px;
         left: 50%;
-        transform: translate(-50%, 0);
     }
 }
