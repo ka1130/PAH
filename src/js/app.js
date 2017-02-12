@@ -21,7 +21,6 @@
 
     // Trigger clock on menu (bigger screens)
     $(".hover-line").on("click", function(event) {
-        console.log($(this).next());
-        window.location.href = $(this).next('a').attr('href');
+        window.location.href = $(this).next("a").attr("href");
     });
 })();
