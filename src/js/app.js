@@ -23,4 +23,28 @@
     $(".hover-line").on("click", function(event) {
         window.location.href = $(this).next("a").attr("href");
     });
+
+    // Bigger well on bigger screens
+    const device = window.matchMedia("screen and (min-width: 768px)");
+    const well = document.getElementById("join").getElementsByTagName("img")[0];
+
+    if (device.matches) {
+        well.setAttribute("src", "img/studnia-big.svg");
+    } else {
+        well.setAttribute("src", "img/studnia.svg");
+    }
+
+    window.addEventListener("resize", () => {
+        if (device.matches) {
+            well.setAttribute("src", "img/studnia-big.svg");
+        } else {
+            well.setAttribute("src", "img/studnia.svg");
+        }
+    });
+
+
+
+
+
+    //end
 })();
