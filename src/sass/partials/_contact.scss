@@ -43,9 +43,6 @@
             font-size: 1em;
         }
     }
-    .a-wrapper {
-        overflow: auto;
-    }
     a {
         color: $color-main;
         text-decoration: underline;
@@ -54,12 +51,13 @@
         display: block;
         margin-bottom: 10px;
         @media screen and (min-width: 769px) {
-            &.link-first {
-                float: right;
-                text-align: right;
-            }
+            display: inline;
             &.link-last {
-                float: left;
+                display: none;
+            }
+            span {
+                text-decoration: none;
+                color: $color-main;
             }
         }
     }

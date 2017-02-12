@@ -44,6 +44,7 @@
 
     // Text inputs in Contact section on bigger screens
     const p1 = document.querySelector("#contact").querySelectorAll("p")[2];
+    const p2 = document.querySelector("#contact").querySelectorAll(".col-sm-offset-3")[0];
 
     if (device.matches) {
         p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
@@ -56,6 +57,20 @@
             p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
         } else {
             p1.innerHTML = "kampanie@pah.org.pl</br> tel.: 000 000 000";
+        }
+    });
+
+    if (device.matches) {
+        p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='#' target='_new'>Kampania Niosę Pomoc</a>";
+    } else {
+        p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>";
+    }
+
+    window.addEventListener("resize", () => {
+        if (device.matches) {
+            p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='#' target='_new'>Kampania Niosę Pomoc</a>";
+        } else {
+            p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>";
         }
     });
 
