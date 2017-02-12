@@ -26,7 +26,9 @@
     border-radius: 15px;
     color: $color-neutral;
     padding-bottom: 20px;
-    height: 565px;
+    @media screen and (min-width: 991px) {
+        height: 565px;
+    }
     &:last-of-type {
         margin-bottom: 40px;
     }

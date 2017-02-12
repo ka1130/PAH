@@ -19,14 +19,31 @@
     img {
         display: block;
         margin: 0 auto;
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+            float: left;
+        }
         &.waterdrop {
             margin: 35px auto;
+            @media screen and (min-width: 768px) {
+                height: 100%;
+                vertical-align: middle;
+            }
             +p {
                 font-size: 1.125em;
                 width: 200px;
                 font-weight: bold;
                 text-align: center;
                 margin: 0 auto;
+                @media screen and (min-width: 768px) {
+                    margin: 30px;
+                    width: 240px;
+                    text-align: center;
+                    display: inline-block;
+                    float: left;
+                    height: 100%;
+                    vertical-align: middle;
+                }
             }
         }
     }
@@ -36,4 +53,10 @@
     background-color: #e6e6e6;
     height: 2px;
     width: 100%;
+}
+
+.div-line {
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
 }
