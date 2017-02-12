@@ -16,14 +16,25 @@
         font-size: 1.2em;
         text-align: center;
         line-height: 50px;
+        &:hover {
+            text-decoration: none;
+            background-color: #2d8ac6;
+        }
     }
     .btn-white {
         @extend .btn-blue;
         background-color: #fff;
-        border: 3px solid $color-main;
+        border: 2.5px solid $color-main;
         color: $color-main;
         text-transform: lowercase;
         line-height: 45px;
+        &:hover {
+            background-color: $color-main;
+            border: none;
+            color: #fff;
+            text-decoration: none;
+            line-height: 48px;
+        }
     }
     .btn-last {
         margin-bottom: 40px;
@@ -31,12 +42,19 @@
     .btn-grey {
         @extend .btn-blue;
         width: 167px;
-        line-height: 42px;
+        line-height: 45px;
         background-color: #fff;
         text-transform: lowercase;
-        border: 2px solid $color-neutral;
+        border: 2.5px solid $color-neutral;
         color: $color-neutral;
         margin: 30px 0;
+        &:hover {
+            background-color: $color-neutral;
+            border: none;
+            color: #fff;
+            text-decoration: none;
+            line-height: 48px;
+        }
     }
     h6 {
         font-size: 1.25em;
