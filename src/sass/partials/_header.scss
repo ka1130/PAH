@@ -65,6 +65,7 @@ header {
                 position: relative;
                 display: table-cell;
                 vertical-align: middle;
+                position: relative;
             }
             a {
                 color: #fff;
@@ -72,20 +73,34 @@ header {
                 padding-left: 10px;
                 &:hover {
                     text-decoration: none;
-                    float: left;
                 }
             }
         }
     }
     .hover-line {
-        height: 5px;
-        width: 53px;
+        height: 40px;
+        width: 45px;
         position: absolute;
-        left: 0;
-        top: 5px;
-        background-color: #fff;
+        left: 23px;
+        top: 0;
+        border-bottom: 4px solid #fff;
+        opacity: 0;
+        transition: opacity 0.3s;
+        cursor: pointer;
+        &.line-two {
+            width: 87px;
+            left: 24px;
+        }
+        &.line-three {
+            width: 104px;
+            left: 27px;
+        }
+        &.line-four {
+            left: 26px;
+            width: 53px;
+        }
         &:hover {
-            display: block;
+            opacity: 1;
         }
     }
 }
