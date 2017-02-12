@@ -55,10 +55,16 @@
             &.link-last {
                 display: none;
             }
-            // span {
-            //     text-decoration: none;
-            //     color: $color-main;
-            // }
         }
     }
+    svg {
+        width: 100%;
+        height: auto;
+        margin: 0 0 -7px 0;
+    }
+}
+
+.svg-wrapper {
+    margin: 0;
+    padding: 0;
 }
