@@ -45,6 +45,9 @@
     // Text inputs in Contact section on bigger screens
     const p1 = document.querySelector("#contact").querySelectorAll("p")[2];
     const p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
+    const p3 = document.getElementsByTagName("footer")[0].querySelectorAll(".col-xs-12")[1].children[0];
+
+    console.log(p3);
 
     if (device.matches) {
         p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
@@ -71,6 +74,20 @@
             p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='#' target='_new'>Kampania Niosę Pomoc</a>";
         } else {
             p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>";
+        }
+    });
+
+    if (device.matches) {
+        p3.innerHTML = "<b>projekt graficzny: <a href='#' target='_new'>Kinga Sieminiak</a>&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+    } else {
+        p3.innerHTML = "<b>projekt graficzny: <a href='#'>Kinga Sieminiak</a> <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+    }
+
+    window.addEventListener("resize", () => {
+        if (device.matches) {
+            p3.innerHTML = "<b>projekt graficzny: <a href='#' target='_new'>Kinga Sieminiak</a>&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+        } else {
+            p3.innerHTML = "<b>projekt graficzny: <a href='#'>Kinga Sieminiak</a> <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
         }
     });
 
