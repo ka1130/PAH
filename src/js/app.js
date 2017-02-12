@@ -25,7 +25,7 @@
     });
 
     // Bigger well on bigger screens
-    const device = window.matchMedia("screen and (min-width: 768px)");
+    const device = window.matchMedia("screen and (min-width: 769px)");
     const well = document.getElementById("join").getElementsByTagName("img")[0];
 
     if (device.matches) {
