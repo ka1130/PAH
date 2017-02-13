@@ -22,6 +22,11 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
+    @media screen and (min-width: 769px) {
+        width: 550px;
+        height: 305px;
+        position: static;
+    }
 }
 
 .iframe-container {
@@ -30,6 +35,12 @@ iframe {
     overflow: hidden;
     padding-bottom: 56.25%;
     margin: 0 20px;
+    @media screen and (min-width: 769px) {
+        width: 550px;
+        height: 305px;
+        padding-bottom: 0;
+        margin-left: 25%;
+    }
 }
 
 .hands-svg {
