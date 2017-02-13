@@ -34,7 +34,7 @@ header {
 .fixed-menu {
     margin: 0;
     width: 100%;
-    padding: 15px 200px 0;
+    padding: 15px;
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -46,12 +46,9 @@ header {
     width: 82%;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 18%;
     background-color: $color-main;
-    overflow-y: hidden;
+    overflow: hidden;
     transition: 0.5s;
-    max-width: 450px;
     float: right;
     @media screen and (min-width: 769px) {
         height: 100px;
@@ -64,23 +61,23 @@ header {
     ul {
         list-style-type: none;
         position: relative;
-        top: 12%;
+        float: right;
         width: 100%;
+        overflow: hidden;
+        display: table;
         @media screen and (min-width: 769px) {
             margin-top: 25px;
             position: static;
-            display: table;
-            float: right;
-            overflow: hidden;
         }
         li {
             color: #fff;
             font-size: 24px;
             padding: 10px 0;
+            display: block;
             @media screen and (min-width: 769px) {
                 text-align: center;
                 font-size: 1.15em;
-                padding: 10px;
+                //padding: 10px;
                 display: table-cell;
                 vertical-align: middle;
                 position: relative;
@@ -91,13 +88,24 @@ header {
                 padding-left: 10px;
                 z-index: 15;
                 @media screen and (min-width: 769px) {
-                    margin: 0;
+                    margin: 0 auto;
                     padding: 0 0 5px 0;
                     display: block;
-                    width: 95%;
                     &:hover {
                         border-bottom: 4px solid white;
                         margin-bottom: -4px;
+                    }
+                    &.link-1 {
+                        width: 49px;
+                    }
+                    &.link-2 {
+                        width: 91px;
+                    }
+                    &.link-3 {
+                        width: 106px;
+                    }
+                    &.link-4 {
+                        width: 55px;
                     }
                 }
                 &:hover {
