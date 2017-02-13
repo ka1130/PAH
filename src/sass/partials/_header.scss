@@ -65,10 +65,9 @@ header {
             font-size: 24px;
             padding: 10px 0;
             @media screen and (min-width: 769px) {
-                text-align: right;
+                text-align: center;
                 font-size: 1.15em;
                 padding: 10px;
-                position: relative;
                 display: table-cell;
                 vertical-align: middle;
                 position: relative;
@@ -78,38 +77,20 @@ header {
                 font-weight: bold;
                 padding-left: 10px;
                 z-index: 15;
+                @media screen and (min-width: 769px) {
+                    margin: 0;
+                    padding: 0 0 5px 0;
+                    display: block;
+                    width: 90%;
+                    &:hover {
+                        border-bottom: 4px solid white;
+                    }
+                }
                 &:hover {
                     text-decoration: none;
                     z-index: 15;
                 }
             }
-        }
-    }
-    .hover-line {
-        height: 40px;
-        width: 45px;
-        position: absolute;
-        left: 23px;
-        top: 0;
-        border-bottom: 4px solid #fff;
-        opacity: 0;
-        transition: opacity 0.3s;
-        cursor: pointer;
-        z-index: 0;
-        &.line-two {
-            width: 87px;
-            left: 24px;
-        }
-        &.line-three {
-            width: 104px;
-            left: 27px;
-        }
-        &.line-four {
-            left: 25px;
-            width: 53px;
-        }
-        &:hover {
-            opacity: 1;
         }
     }
 }
