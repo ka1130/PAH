@@ -19,7 +19,7 @@
 
     }, false)
 
-    // Trigger clock on menu (bigger screens)
+    // Trigger click on menu (bigger screens)
     $(".hover-line").on("click", function(event) {
         window.location.href = $(this).next("a").attr("href");
     });
@@ -41,6 +41,25 @@
             well.setAttribute("src", "img/studnia.svg");
         }
     });
+
+    //Bigger hands on bigger screens
+    const hands = document.getElementById("about").getElementsByTagName("img")[0];
+
+    if (device.matches) {
+        hands.setAttribute("src", "img/hands-big.svg");
+    } else {
+        hands.setAttribute("src", "img/hands.svg");
+    }
+
+    window.addEventListener("resize", () => {
+        if (device.matches) {
+            hands.setAttribute("src", "img/hands-big.svg");
+        } else {
+            hands.setAttribute("src", "img/hands.svg");
+        }
+    });
+
+
 
     // Text inputs in Contact section on bigger screens
     const p1 = document.querySelector("#contact").querySelectorAll("p")[2];
