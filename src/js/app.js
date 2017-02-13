@@ -60,7 +60,6 @@
     });
 
 
-
     // Text inputs in Contact section on bigger screens
     const p1 = document.querySelector("#contact").querySelectorAll("p")[2];
     const p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
@@ -107,6 +106,23 @@
             p3.innerHTML = "<b>projekt graficzny: <a href='#'>Kinga Sieminiak</a> <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
         }
     });
+
+    //Sticky menu
+    const fixed = $(".fixed-menu");
+
+    function scrollMenu(event) {
+        if ($(window).scrollTop() > 250) {
+            fixed.css({ "background-color": "#006fb9" });
+            console.log("ok");
+        } else {
+            fixed.css({ "background": "none" });
+        }
+    }
+    scrollMenu();
+
+    $(window).on("scroll", scrollMenu);
+
+
 
 
 
