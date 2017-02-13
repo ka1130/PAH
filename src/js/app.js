@@ -125,7 +125,10 @@
     // const howTo = fixed.getElementsByTagName("a")[2];
     // const join = fixed.getElementsByTagName("a")[3];
 
-    const shiftWindow = function() { scrollBy(0, -100) };
+    const shiftWindow = function() {
+        scrollBy(0, -100)
+    };
+
     if (location.hash) {
         shiftWindow();
     }
