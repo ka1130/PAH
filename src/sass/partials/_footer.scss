@@ -3,6 +3,9 @@ footer {
     a {
         color: #fff;
         text-decoration: underline;
+        &:hover {
+            color: $color-neutral;
+        }
     }
     img {
         height: 226px;
@@ -10,6 +13,10 @@ footer {
     .row:last-of-type {
         a {
             text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+                color: #fff;
+            }
         }
     }
 }

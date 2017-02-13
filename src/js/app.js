@@ -47,8 +47,6 @@
     const p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
     const p3 = document.getElementsByTagName("footer")[0].querySelectorAll(".col-xs-12")[1].children[0];
 
-    console.log(p3);
-
     if (device.matches) {
         p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
     } else {
