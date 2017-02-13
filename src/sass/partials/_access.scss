@@ -3,6 +3,12 @@
     text-align: center;
 }
 
+#about {
+    @media screen and (min-width: 769px) {
+        margin-top: 220px;
+    }
+}
+
 #access,
 #about {
     h4 {
@@ -25,7 +31,17 @@ iframe {
     @media screen and (min-width: 769px) {
         width: 550px;
         height: 305px;
-        position: static;
+        z-index: 100;
+        overflow: visible;
+    }
+}
+
+#video {
+    @media screen and (min-width: 769px) {
+        position: relative;
+        x-index: 0;
+        height: 150px;
+        width: 100%;
     }
 }
 
@@ -40,6 +56,7 @@ iframe {
         height: 305px;
         padding-bottom: 0;
         margin: 0 auto;
+        z-index: 100;
     }
 }
 
