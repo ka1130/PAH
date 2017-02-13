@@ -40,6 +40,8 @@ header {
     background-color: $color-main;
     overflow-y: hidden;
     transition: 0.5s;
+    max-width: 450px;
+    float: right;
     @media screen and (min-width: 769px) {
         height: 100px;
         width: 100%;
