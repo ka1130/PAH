@@ -80,16 +80,16 @@
     });
 
     if (device.matches) {
-        p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='#' target='_new'>Kampania Niosę Pomoc</a>";
+        p2.innerHTML = "<a href='http://www.pah.org.pl/' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='#' target='_new'>Kampania Niosę Pomoc</a>";
     } else {
-        p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>";
+        p2.innerHTML = "<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Polska Akcja Humanitarna</a>";
     }
 
     window.addEventListener("resize", () => {
         if (device.matches) {
-            p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='#' target='_new'>Kampania Niosę Pomoc</a>";
+            p2.innerHTML = "<a href='http://www.pah.org.pl/' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='#' target='_new'>Kampania Niosę Pomoc</a>";
         } else {
-            p2.innerHTML = "<a href='#' target='_new'>Polska Akcja Humanitarna</a>";
+            p2.innerHTML = "<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Polska Akcja Humanitarna</a>";
         }
     });
 
