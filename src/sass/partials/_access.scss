@@ -32,7 +32,7 @@ iframe {
     @media screen and (min-width: 769px) {
         width: 550px;
         height: 305px;
-        z-index: 100;
+        z-index: 10;
         //overflow: visible;
         opacity: .99;
     }
@@ -41,7 +41,7 @@ iframe {
 #video {
     @media screen and (min-width: 769px) {
         position: relative;
-        x-index: 0;
+        z-index: -1;
         height: 150px;
         width: 100%;
     }
