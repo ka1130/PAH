@@ -33,7 +33,8 @@ iframe {
         width: 550px;
         height: 305px;
         z-index: 100;
-        overflow: visible;
+        //overflow: visible;
+        opacity: .99;
     }
 }
 

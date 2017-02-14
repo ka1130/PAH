@@ -43,21 +43,21 @@ header {
 
 .main-menu {
     height: 0%;
-    // width: 82%;
-    width: 100%;
+    width: 72%;
     position: fixed;
-    z-index: 1;
+    z-index: 110;
     background-color: $color-main;
     overflow-y: hidden;
     transition: 0.5s;
     float: right;
     top: 0;
+    right: 0;
     @media screen and (min-width: 769px) {
         height: 100px;
         width: 100%;
         background: none;
         transition: none;
-        position: static;
+        position: relative;
         overflow: hidden;
     }
     ul {
@@ -68,6 +68,7 @@ header {
         overflow: hidden;
         display: table;
         margin-top: 0;
+        z-index: 110;
         @media screen and (min-width: 769px) {
             margin-top: 25px;
             position: static;
@@ -93,7 +94,6 @@ header {
                     margin: 0 auto;
                     padding: 0 0 5px 0;
                     display: block;
-                    border: 1px solid white;
                     &:hover {
                         border-bottom: 4px solid white;
                         margin-bottom: -4px;
