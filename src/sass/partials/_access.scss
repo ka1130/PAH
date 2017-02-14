@@ -14,11 +14,18 @@
 #about {
     h4 {
         font-size: 1.87em;
-        margin: 30px auto;
+        margin: 50px auto;
+        font-weight: 600;
+        @media screen and (min-width: 768px) {
+            font-size: 2.285px;
+        }
     }
     p {
         font-size: 1.14em;
         margin: 0 0 30px 0;
+        @media screen and (min-width: 768px) {
+            font-size: 1.285px;
+        }
     }
 }
 

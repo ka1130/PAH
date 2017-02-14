@@ -94,16 +94,16 @@
     });
 
     if (device.matches) {
-        p3.innerHTML = "<b>projekt graficzny: <a href='#' target='_new'>Kinga Sieminiak</a>&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+        p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
     } else {
-        p3.innerHTML = "<b>projekt graficzny: <a href='#'>Kinga Sieminiak</a> <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+        p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
     }
 
     window.addEventListener("resize", () => {
         if (device.matches) {
-            p3.innerHTML = "<b>projekt graficzny: <a href='#' target='_new'>Kinga Sieminiak</a>&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+            p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
         } else {
-            p3.innerHTML = "<b>projekt graficzny: <a href='#'>Kinga Sieminiak</a> <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+            p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
         }
     });
 
