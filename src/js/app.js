@@ -138,11 +138,20 @@
         var water = $(".water");
         var newHeight = 95 / 100 * water.data("percent");
 
-        $(".percent").on("click", function(event) {
-            water.animate({
-                height: newHeight
-            }, 1000)
+        $(window).on("scroll", function(event) {
+
+            var yScroll = window.pageYOffset;
+            var position = $("#join").offset().top;
+
+            if (yScroll > position) {
+
+                water.animate({
+                    height: newHeight
+                }, 1000)
+            }
         });
+
+
 
 
 
