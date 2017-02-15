@@ -170,6 +170,18 @@
             $(".frame-rounded").height(maxHeight);
         }
 
+        window.addEventListener("resize", function(event) {
+            if (device.matches) {
+                var heights = $(".frame-rounded").map(function() {
+                        return $(this).height();
+                    }).get(),
+
+                    maxHeight = Math.max.apply(null, heights);
+
+                $(".frame-rounded").height(maxHeight);
+            }
+        });
+
 
 
 
