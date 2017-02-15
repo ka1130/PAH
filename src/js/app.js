@@ -123,6 +123,8 @@
         }
         scrollMenu();
 
+        $(document).on("scroll", scrollMenu);
+
         //Scroll animation
         $(document).on("click", ".link", function(event) {
             event.preventDefault();
