@@ -123,18 +123,6 @@
         }
         scrollMenu();
 
-        // $(window).on("scroll", scrollMenu);
-
-        // var shiftWindow = function() {
-        //     scrollBy(0, -100)
-        // };
-
-        // if (location.hash) {
-        //     shiftWindow();
-        // }
-
-        // window.addEventListener("hashchange", shiftWindow);
-
         //Scroll animation
         $(document).on("click", "a", function(event) {
             event.preventDefault();
@@ -146,6 +134,18 @@
             }, 500);
         });
 
+        //Well animation
+        var water = $(".water");
+        var newHeight = 95 / 100 * water.data("percent");
+
+        $(".percent").on("click", function(event) {
+            water.animate({
+                height: newHeight
+            }, 1000)
+        });
+
+
+
 
 
 
@@ -153,5 +153,4 @@
 
         //end
     }, false)
-
 })();
