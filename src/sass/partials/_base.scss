@@ -7,3 +7,18 @@ body {
     font-style: normal;
     overflow-x: hidden;
 }
+
+.section-blue {
+    background-color: $color-main;
+    color: #fff;
+}
+
+.section-light {
+    background-color: $color-light;
+    color: $color-neutral;
+}
+
+.section-white {
+    background-color: #fff;
+    color: $color-neutral;
+}
