@@ -136,13 +136,15 @@
         // window.addEventListener("hashchange", shiftWindow);
 
         //Scroll animation
-        // $(document).on("click", "a", function(event) {
-        //     event.preventDefault();
+        $(document).on("click", "a", function(event) {
+            event.preventDefault();
 
-        //     $("html, body").animate({
-        //         scrollTop: $($.attr(this, "href")).offset().top - 100;
-        //     }, 500);
-        // });
+            var myId = $(this).attr("href");
+
+            $("html, body").animate({
+                scrollTop: $(myId).offset().top - 100
+            }, 500);
+        });
 
 
 
