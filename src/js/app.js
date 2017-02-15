@@ -35,14 +35,14 @@
         if (device.matches) {
             well.setAttribute("src", "img/studnia-big_empty.svg");
         } else {
-            well.setAttribute("src", "img/studnia.svg");
+            well.setAttribute("src", "img/studnia-small_empty.svg");
         }
 
         window.addEventListener("resize", function(event) {
             if (device.matches) {
                 well.setAttribute("src", "img/studnia-big_empty.svg");
             } else {
-                well.setAttribute("src", "img/studnia.svg");
+                well.setAttribute("src", "img/studnia-small_empty.svg");
             }
         });
 
@@ -136,7 +136,15 @@
 
         //Well animation
         var water = $(".water");
-        var newHeight = 95 / 100 * water.data("percent");
+        var newHeight;
+
+        if (device.matches) {
+            newHeight = 95 / 100 * water.data("percent");
+        } else {
+            newHeight = 65 / 100 * water.data("percent");
+        }
+
+
 
         $(window).on("scroll", function(event) {
 

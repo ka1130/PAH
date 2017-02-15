@@ -112,13 +112,19 @@
 }
 
 .water {
-    width: 211px;
-    // height: 95px;
+    width: 145px;
+    left: 221px;
+    bottom: 85px;
     height: 0;
     position: absolute;
-    bottom: 12px;
-    left: 43px;
     background-color: #fff;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    @media screen and (min-width: 768px) {
+        width: 211px;
+        bottom: 12px;
+        left: 43px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 }
