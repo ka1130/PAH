@@ -124,7 +124,7 @@
         scrollMenu();
 
         //Scroll animation
-        $(document).on("click", "a", function(event) {
+        $(document).on("click", ".link", function(event) {
             event.preventDefault();
 
             var myId = $(this).attr("href");
