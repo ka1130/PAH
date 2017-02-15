@@ -25,6 +25,7 @@
     img {
         display: block;
         margin: 0 auto;
+        position: relative;
         @media screen and (min-width: 769px) {
             display: inline-block;
             float: left;
@@ -105,18 +106,17 @@
 }
 
 .img-container {
-    position: relative;
     &.img-container-first {
         margin-top: -20px;
     }
 }
 
 .water {
+    // position: absolute;
     width: 145px;
-    left: 221px;
-    bottom: 85px;
+    // left: 221px;
+    // bottom: 85px;
     height: 0;
-    position: absolute;
     background-color: #fff;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
