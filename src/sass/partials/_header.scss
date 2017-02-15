@@ -131,6 +131,7 @@ header {
     display: block;
     font-size: 30px;
     cursor: pointer;
+    font-family: 'fontello';
     @media screen and (min-width: 769px) {
         display: none;
     }
@@ -143,13 +144,15 @@ header {
 .closebtn {
     transition: 0.3s;
     text-align: right;
-    margin-top: 24px;
-    margin-right: 15px;
+    margin-top: 30px;
+    margin-right: 35px;
     color: #fff;
     display: block;
-    font-size: 40px;
+    font-size: 50px;
     cursor: pointer;
     z-index: 10;
+    font-family: 'fontello';
+    font-weight: bold;
     @media screen and (min-width: 769px) {
         display: none;
     }

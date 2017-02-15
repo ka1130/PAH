@@ -5,6 +5,8 @@
         var openBtn = document.getElementsByClassName("openbtn")[0];
         var closeBtn = document.getElementsByClassName("closebtn")[0];
         var nav = document.getElementsByTagName("nav")[0];
+        var menuLinks = document.querySelector(".main-menu").getElementsByTagName("a");
+        var device = window.matchMedia("screen and (min-width: 769px)");
 
         function openNav() {
             nav.style.height = "100%";
@@ -17,135 +19,137 @@
         openBtn.addEventListener("click", openNav, false);
         closeBtn.addEventListener("click", closeNav, false);
 
-    }, false)
+        for (var i = 0; i < menuLinks.length; i++) {
+            menuLinks[i].addEventListener("click", closeNav, false);
+        }
 
-    // Trigger click on menu (bigger screens)
-    $(".hover-line").on("click", function(event) {
-        window.location.href = $(this).next("a").attr("href");
-    });
 
-    // Bigger well on bigger screens
-    var device = window.matchMedia("screen and (min-width: 769px)");
-    var well = document.getElementById("join").getElementsByTagName("img")[0];
+        // Trigger click on menu (bigger screens)
+        $(".hover-line").on("click", function(event) {
+            window.location.href = $(this).next("a").attr("href");
+        });
 
-    if (device.matches) {
-        well.setAttribute("src", "img/studnia-big.svg");
-    } else {
-        well.setAttribute("src", "img/studnia.svg");
-    }
+        // Bigger well on bigger screens
+        var well = document.getElementById("join").getElementsByTagName("img")[0];
 
-    window.addEventListener("resize", () => {
         if (device.matches) {
             well.setAttribute("src", "img/studnia-big.svg");
         } else {
             well.setAttribute("src", "img/studnia.svg");
         }
-    });
 
-    //Bigger hands on bigger screens
-    var hands = document.getElementById("about").getElementsByTagName("img")[0];
+        window.addEventListener("resize", function(event) {
+            if (device.matches) {
+                well.setAttribute("src", "img/studnia-big.svg");
+            } else {
+                well.setAttribute("src", "img/studnia.svg");
+            }
+        });
 
-    if (device.matches) {
-        hands.setAttribute("src", "img/hands-big.svg");
-    } else {
-        hands.setAttribute("src", "img/hands.svg");
-    }
+        //Bigger hands on bigger screens
+        var hands = document.getElementById("about").getElementsByTagName("img")[0];
 
-    window.addEventListener("resize", function(event) {
         if (device.matches) {
             hands.setAttribute("src", "img/hands-big.svg");
         } else {
             hands.setAttribute("src", "img/hands.svg");
         }
-    });
+
+        window.addEventListener("resize", function(event) {
+            if (device.matches) {
+                hands.setAttribute("src", "img/hands-big.svg");
+            } else {
+                hands.setAttribute("src", "img/hands.svg");
+            }
+        }, false);
 
 
-    // Text inputs in Contact section on bigger screens
-    var p1 = document.querySelector("#contact").querySelectorAll("p")[2];
-    var p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
-    var p3 = document.getElementsByTagName("footer")[0].querySelectorAll(".col-xs-12")[1].children[0];
+        // Text inputs in Contact section on bigger screens
+        var p1 = document.querySelector("#contact").querySelectorAll("p")[2];
+        var p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
+        var p3 = document.getElementsByTagName("footer")[0].querySelectorAll(".col-xs-12")[1].children[0];
 
-    if (device.matches) {
-        p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
-    } else {
-        p1.innerHTML = "kampanie@pah.org.pl</br> tel.: 000 000 000";
-    }
-
-    window.addEventListener("resize", function(event) {
         if (device.matches) {
             p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
         } else {
             p1.innerHTML = "kampanie@pah.org.pl</br> tel.: 000 000 000";
         }
-    });
 
-    if (device.matches) {
-        p2.innerHTML = "<a href='http://www.pah.org.pl/' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Kampania Niosę Pomoc</a>";
-    } else {
-        p2.innerHTML = "<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Polska Akcja Humanitarna</a>";
-    }
+        window.addEventListener("resize", function(event) {
+            if (device.matches) {
+                p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
+            } else {
+                p1.innerHTML = "kampanie@pah.org.pl</br> tel.: 000 000 000";
+            }
+        });
 
-    window.addEventListener("resize", function(event) {
         if (device.matches) {
             p2.innerHTML = "<a href='http://www.pah.org.pl/' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Kampania Niosę Pomoc</a>";
         } else {
             p2.innerHTML = "<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Polska Akcja Humanitarna</a>";
         }
-    });
 
-    if (device.matches) {
-        p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
-    } else {
-        p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
-    }
+        window.addEventListener("resize", function(event) {
+            if (device.matches) {
+                p2.innerHTML = "<a href='http://www.pah.org.pl/' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Kampania Niosę Pomoc</a>";
+            } else {
+                p2.innerHTML = "<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Polska Akcja Humanitarna</a>";
+            }
+        });
 
-    window.addEventListener("resize", function(event) {
         if (device.matches) {
             p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
         } else {
             p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
         }
-    });
 
-    //Sticky menu
-    const fixed = $(".fixed-menu");
+        window.addEventListener("resize", function(event) {
+            if (device.matches) {
+                p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+            } else {
+                p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
+            }
+        });
 
-    function scrollMenu(event) {
-        if ($(window).scrollTop() > 150) {
-            fixed.css({ "background-color": "#006fb9" });
-        } else {
-            fixed.css({ "background": "none" });
+        //Sticky menu
+        const fixed = $(".fixed-menu");
+
+        function scrollMenu(event) {
+            if ($(window).scrollTop() > 150) {
+                fixed.css({ "background-color": "#006fb9" });
+            } else {
+                fixed.css({ "background": "none" });
+            }
         }
-    }
-    scrollMenu();
+        scrollMenu();
 
-    // $(window).on("scroll", scrollMenu);
+        // $(window).on("scroll", scrollMenu);
 
-    // var shiftWindow = function() {
-    //     scrollBy(0, -100)
-    // };
+        // var shiftWindow = function() {
+        //     scrollBy(0, -100)
+        // };
 
-    // if (location.hash) {
-    //     shiftWindow();
-    // }
+        // if (location.hash) {
+        //     shiftWindow();
+        // }
 
-    // window.addEventListener("hashchange", shiftWindow);
+        // window.addEventListener("hashchange", shiftWindow);
 
-    //Scroll animation
-    // $(document).on("click", "a", function(event) {
-    //     event.preventDefault();
+        //Scroll animation
+        // $(document).on("click", "a", function(event) {
+        //     event.preventDefault();
 
-    //     $("html, body").animate({
-    //         scrollTop: $($.attr(this, "href")).offset().top - 100;
-    //     }, 500);
-    // });
-
+        //     $("html, body").animate({
+        //         scrollTop: $($.attr(this, "href")).offset().top - 100;
+        //     }, 500);
+        // });
 
 
 
 
 
 
+        //end
+    }, false)
 
-    //end
 })();
