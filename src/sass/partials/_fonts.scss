@@ -1,24 +1,24 @@
 @font-face {
     font-family: 'Futura PT';
-    src: url('../fonts/subset-FuturaPT-Heavy.eot');
-    src: local('Futura PT Heavy'), local('FuturaPT-Heavy'), url('../fonts/subset-FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/subset-FuturaPT-Heavy.woff2') format('woff2'), url('../fonts/subset-FuturaPT-Heavy.woff') format('woff'), url('../fonts/subset-FuturaPT-Heavy.ttf') format('truetype'), url('../fonts/subset-FuturaPT-Heavy.svg#FuturaPT-Heavy') format('svg');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura PT';
-    src: url('../fonts/subset-FuturaPT-Medium.eot');
-    src: local('Futura PT Medium'), local('FuturaPT-Medium'), url('../fonts/subset-FuturaPT-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/subset-FuturaPT-Medium.woff2') format('woff2'), url('../fonts/subset-FuturaPT-Medium.woff') format('woff'), url('../fonts/subset-FuturaPT-Medium.ttf') format('truetype'), url('../fonts/subset-FuturaPT-Medium.svg#FuturaPT-Medium') format('svg');
+    src: url('../fonts/FuturaPT-Medium.eot');
+    src: local('Futura PT Medium'), local('FuturaPT-Medium'), url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaPT-Medium.woff2') format('woff2'), url('../fonts/FuturaPT-Medium.woff') format('woff'), url('../fonts/FuturaPT-Medium.ttf') format('truetype'), url('../fonts/FuturaPT-Medium.svg#FuturaPT-Medium') format('svg');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Futura PT';
-    src: url('../fonts/subset-FuturaPT-DemiBold.eot');
-    src: local('Futura PT DemiBold'), local('FuturaPT-DemiBold'), url('../fonts/subset-FuturaPT-DemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/subset-FuturaPT-DemiBold.woff2') format('woff2'), url('../fonts/subset-FuturaPT-DemiBold.woff') format('woff'), url('../fonts/subset-FuturaPT-DemiBold.ttf') format('truetype'), url('../fonts/subset-FuturaPT-DemiBold.svg#FuturaPT-DemiBold') format('svg');
+    src: url('../fonts/FuturaPT-DemiBold.eot');
+    src: local('Futura PT DemiBold'), local('FuturaPT-DemiBold'), url('../fonts/FuturaPT-DemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaPT-DemiBold.woff2') format('woff2'), url('../fonts/FuturaPT-DemiBold.woff') format('woff'), url('../fonts/FuturaPT-DemiBold.ttf') format('truetype'), url('../fonts/FuturaPT-DemiBold.svg#FuturaPT-DemiBold') format('svg');
     font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Heavy.eot');
+    src: local('Futura PT Heavy'), local('FuturaPT-Heavy'), url('../fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaPT-Heavy.woff2') format('woff2'), url('../fonts/FuturaPT-Heavy.woff') format('woff'), url('../fonts/FuturaPT-Heavy.ttf') format('truetype'), url('../fonts/FuturaPT-Heavy.svg#FuturaPT-Heavy') format('svg');
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -38,22 +38,6 @@
     font-style: normal;
 }
 
-
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-
-
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-
-
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?16881357#fontello') format('svg');
-  }
-}
-*/
-
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
     font-family: "fontello";
@@ -65,22 +49,12 @@
     width: 1em;
     margin-right: .2em;
     text-align: center;
-    /* opacity: .8; */
-    /* For safety - reset parent styles, that can break glyph codes*/
     font-variant: normal;
     text-transform: none;
-    /* fix buttons height, for twitter bootstrap */
     line-height: 1em;
-    /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
     margin-left: .2em;
-    /* you can be more comfortable with increased icons size */
-    /* font-size: 120%; */
-    /* Font smoothing. That was taken from TWBS */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-menu:before {
