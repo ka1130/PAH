@@ -111,7 +111,7 @@
     const fixed = $(".fixed-menu");
 
     function scrollMenu(event) {
-        if ($(window).scrollTop() > 250) {
+        if ($(window).scrollTop() > 150) {
             fixed.css({ "background-color": "#006fb9" });
         } else {
             fixed.css({ "background": "none" });
@@ -120,10 +120,6 @@
     scrollMenu();
 
     $(window).on("scroll", scrollMenu);
-
-    // const about = fixed.getElementsByTagName("a")[1];
-    // const howTo = fixed.getElementsByTagName("a")[2];
-    // const join = fixed.getElementsByTagName("a")[3];
 
     const shiftWindow = function() {
         scrollBy(0, -100)
