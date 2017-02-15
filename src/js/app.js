@@ -33,14 +33,14 @@
         var well = document.getElementById("join").getElementsByTagName("img")[0];
 
         if (device.matches) {
-            well.setAttribute("src", "img/studnia-big.svg");
+            well.setAttribute("src", "img/studnia-big_empty.svg");
         } else {
             well.setAttribute("src", "img/studnia.svg");
         }
 
         window.addEventListener("resize", function(event) {
             if (device.matches) {
-                well.setAttribute("src", "img/studnia-big.svg");
+                well.setAttribute("src", "img/studnia-big_empty.svg");
             } else {
                 well.setAttribute("src", "img/studnia.svg");
             }
