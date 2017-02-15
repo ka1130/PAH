@@ -17,14 +17,14 @@
         margin: 50px auto;
         font-weight: 600;
         @media screen and (min-width: 768px) {
-            font-size: 2.285px;
+            font-size: 2.285em;
         }
     }
     p {
         font-size: 1.14em;
         margin: 0 0 30px 0;
         @media screen and (min-width: 768px) {
-            font-size: 1.285px;
+            font-size: 1.285em;
         }
     }
 }
@@ -80,5 +80,11 @@ iframe {
         transform: translate(-50%, 0);
         bottom: -1px;
         left: 50%;
+        @media screen and (min-width: 769px) {
+            position: static;
+            transform: none;
+            float: right;
+            margin-bottom: -1px;
+        }
     }
 }
