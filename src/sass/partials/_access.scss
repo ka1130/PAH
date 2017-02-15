@@ -75,12 +75,15 @@ iframe {
     @media screen and (max-width: 768px) {
         margin-top: 260px;
     }
+    @media screen and (min-width: 769px) and (max-width: 991px) {
+        margin-top: 430px;
+    }
     img {
         position: absolute;
         transform: translate(-50%, 0);
         bottom: -1px;
         left: 50%;
-        @media screen and (min-width: 769px) {
+        @media screen and (min-width: 992px) {
             position: static;
             transform: none;
             float: right;

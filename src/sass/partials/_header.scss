@@ -114,8 +114,10 @@ header {
                         width: 58px;
                     }
                 }
-                &:hover {
-                    text-decoration: none;
+                &:hover,
+                &:visited,
+                &:link {
+                    text-decoration: none !important;
                     z-index: 15;
                 }
             }
@@ -157,7 +159,8 @@ header {
         display: none;
     }
     &:hover,
-    &:focus {
+    &:focus,
+    {
         color: #f1f1f1;
     }
 }
