@@ -119,17 +119,26 @@
     }
     scrollMenu();
 
-    $(window).on("scroll", scrollMenu);
+    // $(window).on("scroll", scrollMenu);
 
-    const shiftWindow = function() {
-        scrollBy(0, -100)
-    };
+    // var shiftWindow = function() {
+    //     scrollBy(0, -100)
+    // };
 
-    if (location.hash) {
-        shiftWindow();
-    }
+    // if (location.hash) {
+    //     shiftWindow();
+    // }
 
-    window.addEventListener("hashchange", shiftWindow);
+    // window.addEventListener("hashchange", shiftWindow);
+
+    //Scroll animation
+    // $(document).on("click", "a", function(event) {
+    //     event.preventDefault();
+
+    //     $("html, body").animate({
+    //         scrollTop: $($.attr(this, "href")).offset().top - 100;
+    //     }, 500);
+    // });
 
 
 
