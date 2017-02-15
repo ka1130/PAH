@@ -144,8 +144,6 @@
             newHeight = 65 / 100 * water.data("percent");
         }
 
-
-
         $(window).on("scroll", function(event) {
 
             var yScroll = window.pageYOffset;
@@ -158,6 +156,15 @@
                 }, 1000)
             }
         });
+
+        //Equal height of columns
+        var heights = $(".frame-rounded").map(function() {
+                return $(this).height();
+            }).get(),
+
+            maxHeight = Math.max.apply(null, heights);
+
+        $(".frame-rounded").height(maxHeight);
 
 
 

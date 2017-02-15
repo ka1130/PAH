@@ -30,9 +30,6 @@
     border-radius: 15px;
     color: $color-neutral;
     padding-bottom: 20px;
-    @media screen and (min-width: 991px) {
-        height: 480px;
-    }
     &:last-of-type {
         margin-bottom: 40px;
     }
