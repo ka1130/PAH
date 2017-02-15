@@ -160,13 +160,16 @@
         });
 
         //Equal height of columns
-        var heights = $(".frame-rounded").map(function() {
-                return $(this).height();
-            }).get(),
+        if (!device.matches) {
+            var heights = $(".frame-rounded").map(function() {
+                    return $(this).height();
+                }).get(),
 
-            maxHeight = Math.max.apply(null, heights);
+                maxHeight = Math.max.apply(null, heights);
 
-        $(".frame-rounded").height(maxHeight);
+            $(".frame-rounded").height(maxHeight);
+        }
+
 
 
 
