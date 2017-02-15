@@ -2,9 +2,9 @@
     document.addEventListener("DOMContentLoaded", function() {
 
         // Hamburger menu
-        const openBtn = document.getElementsByClassName("openbtn")[0];
-        const closeBtn = document.getElementsByClassName("closebtn")[0];
-        const nav = document.getElementsByTagName("nav")[0];
+        var openBtn = document.getElementsByClassName("openbtn")[0];
+        var closeBtn = document.getElementsByClassName("closebtn")[0];
+        var nav = document.getElementsByTagName("nav")[0];
 
         function openNav() {
             nav.style.height = "100%";
@@ -25,8 +25,8 @@
     });
 
     // Bigger well on bigger screens
-    const device = window.matchMedia("screen and (min-width: 769px)");
-    const well = document.getElementById("join").getElementsByTagName("img")[0];
+    var device = window.matchMedia("screen and (min-width: 769px)");
+    var well = document.getElementById("join").getElementsByTagName("img")[0];
 
     if (device.matches) {
         well.setAttribute("src", "img/studnia-big.svg");
@@ -43,7 +43,7 @@
     });
 
     //Bigger hands on bigger screens
-    const hands = document.getElementById("about").getElementsByTagName("img")[0];
+    var hands = document.getElementById("about").getElementsByTagName("img")[0];
 
     if (device.matches) {
         hands.setAttribute("src", "img/hands-big.svg");
@@ -51,7 +51,7 @@
         hands.setAttribute("src", "img/hands.svg");
     }
 
-    window.addEventListener("resize", () => {
+    window.addEventListener("resize", function(event) {
         if (device.matches) {
             hands.setAttribute("src", "img/hands-big.svg");
         } else {
@@ -61,9 +61,9 @@
 
 
     // Text inputs in Contact section on bigger screens
-    const p1 = document.querySelector("#contact").querySelectorAll("p")[2];
-    const p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
-    const p3 = document.getElementsByTagName("footer")[0].querySelectorAll(".col-xs-12")[1].children[0];
+    var p1 = document.querySelector("#contact").querySelectorAll("p")[2];
+    var p2 = document.querySelector("#contact").querySelectorAll(".contact-links")[0];
+    var p3 = document.getElementsByTagName("footer")[0].querySelectorAll(".col-xs-12")[1].children[0];
 
     if (device.matches) {
         p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
@@ -71,7 +71,7 @@
         p1.innerHTML = "kampanie@pah.org.pl</br> tel.: 000 000 000";
     }
 
-    window.addEventListener("resize", () => {
+    window.addEventListener("resize", function(event) {
         if (device.matches) {
             p1.innerHTML = "kampanie@pah.org.pl&emsp;|&emsp;tel.: 000 000 000";
         } else {
@@ -85,7 +85,7 @@
         p2.innerHTML = "<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Polska Akcja Humanitarna</a>";
     }
 
-    window.addEventListener("resize", () => {
+    window.addEventListener("resize", function(event) {
         if (device.matches) {
             p2.innerHTML = "<a href='http://www.pah.org.pl/' target='_new'>Polska Akcja Humanitarna</a>&emsp;|&emsp;<a href='http://www.pah.org.pl/kampanieedukacyjne' target='_new'>Kampania Niosę Pomoc</a>";
         } else {
@@ -99,7 +99,7 @@
         p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak <br/> development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
     }
 
-    window.addEventListener("resize", () => {
+    window.addEventListener("resize", function(event) {
         if (device.matches) {
             p3.innerHTML = "<b>projekt graficzny: Kinga Sieminiak&emsp;|&emsp;development: <a href='https://github.com/ka1130' target='_new'>Kamila Matla-Tomczyk</a></b>";
         } else {
