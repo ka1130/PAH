@@ -160,7 +160,7 @@
         });
 
         //Equal height of columns
-        if (!device.matches) {
+        if (device.matches) {
             var heights = $(".frame-rounded").map(function() {
                     return $(this).height();
                 }).get(),
