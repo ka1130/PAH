@@ -63,6 +63,9 @@ header {
     float: right;
     top: 0;
     right: 0;
+    @media only screen and (max-device-width: 736px) and (orientation: landscape) {
+        width: 89%;
+    }
     @media screen and (min-width: 769px) {
         height: 100px;
         width: 100%;
@@ -80,6 +83,9 @@ header {
         display: table;
         margin: 20% 0 0 0;
         z-index: 110;
+        @media only screen and (max-device-width: 736px) and (orientation: landscape) {
+            margin: -8% 0 0 0;
+        }
         @media screen and (min-width: 769px) {
             margin-top: 25px;
             position: static;
