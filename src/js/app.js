@@ -185,11 +185,19 @@
         function updateColumnsSize() {
             if (deviceBigger.matches) {
 
-                var heights = $(".frame-rounded").map(function() {
-                        return $(this).height();
-                    }).get(),
+                // var heights = $(".frame-rounded").map(function() {
+                //         return $(this).height();
+                //     }).get(),
 
-                    maxHeight = Math.max.apply(null, heights);
+                //     maxHeight = Math.max.apply(null, heights);
+
+                var highestBox = 0;
+                $('.frame-rounded').each(function() {
+                    if ($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+                });
+                $('.frame-rounded').height(highestBox);
 
                 $(".frame-rounded").height(maxHeight);
             } else {
