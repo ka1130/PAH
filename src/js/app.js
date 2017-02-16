@@ -137,6 +137,16 @@
             }, 500);
         });
 
+        $(document).on("click", ".circle", function(event) {
+            event.preventDefault();
+
+            var myId = $(this).attr("href");
+
+            $("html, body").animate({
+                scrollTop: $(myId).offset().top - 60
+            }, 500);
+        });
+
         //Well animation
         var water = $(".water");
         var newHeight;
