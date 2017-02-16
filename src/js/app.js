@@ -144,7 +144,7 @@
 
             $("html, body").animate({
                 scrollTop: $(myId).offset().top - 60
-            }, 500);
+            }, 200);
         });
 
         //Well animation
