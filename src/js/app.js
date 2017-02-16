@@ -7,6 +7,7 @@
         var nav = document.getElementsByTagName("nav")[0];
         var menuLinks = document.querySelector(".main-menu").getElementsByTagName("a");
         var device = window.matchMedia("screen and (min-width: 769px)");
+        var deviceBigger = window.matchMedia("screen and (min-width: 992px)");
 
         function openNav() {
             nav.style.height = "100%";
@@ -171,7 +172,25 @@
         });
 
         //Equal height of columns
-        if (device.matches) {
+        var initialHeight1;
+        var initialHeight2;
+        var initialHeight3;
+
+        if (!deviceBigger.matches) {
+            initialHeight1 = $(".number-first").next().height();
+            initialHeight2 = $(".number-second").next().height();
+            initialHeight3 = $(".number-third").next().height();
+        }
+
+        window.addEventListener("resize", function(event) {
+            if (!deviceBigger.matches) {
+                initialHeight1 = $(".number-first").next().height();
+                initialHeight2 = $(".number-second").next().height();
+                initialHeight3 = $(".number-third").next().height();
+            }
+        });
+
+        if (deviceBigger.matches) {
             var heights = $(".frame-rounded").map(function() {
                     return $(this).height();
                 }).get(),
@@ -179,18 +198,25 @@
                 maxHeight = Math.max.apply(null, heights);
 
             $(".frame-rounded").height(maxHeight);
+        } else {
+            $(".number-first").next().height(initialHeight1);
+            $(".number-second").next().height(initialHeight2);
+            $(".number-third").next().height(initialHeight3);
         }
 
+
         window.addEventListener("resize", function(event) {
-            if (device.matches) {
+            if (deviceBigger.matches) {
                 var heights = $(".frame-rounded").map(function() {
                         return $(this).height();
                     }).get(),
 
                     maxHeight = Math.max.apply(null, heights);
-
                 $(".frame-rounded").height(maxHeight);
-                $(".frame-rounded").css({ "padding-bottom": "20px" });
+            } else {
+                $(".number-first").next().height(initialHeight1);
+                $(".number-second").next().height(initialHeight2);
+                $(".number-third").next().height(initialHeight3);
             }
         });
 
