@@ -182,43 +182,27 @@
             initialHeight3 = $(".number-third").next().height();
         }
 
-        window.addEventListener("resize", function(event) {
-            if (!deviceBigger.matches) {
-                initialHeight1 = $(".number-first").next().height();
-                initialHeight2 = $(".number-second").next().height();
-                initialHeight3 = $(".number-third").next().height();
-            }
-        });
-
-        if (deviceBigger.matches) {
-            var heights = $(".frame-rounded").map(function() {
-                    return $(this).height();
-                }).get(),
-
-                maxHeight = Math.max.apply(null, heights);
-
-            $(".frame-rounded").height(maxHeight);
-        } else {
-            $(".number-first").next().height(initialHeight1);
-            $(".number-second").next().height(initialHeight2);
-            $(".number-third").next().height(initialHeight3);
-        }
-
-
-        window.addEventListener("resize", function(event) {
+        function updateColumnsSize() {
             if (deviceBigger.matches) {
+
                 var heights = $(".frame-rounded").map(function() {
                         return $(this).height();
                     }).get(),
 
                     maxHeight = Math.max.apply(null, heights);
+
                 $(".frame-rounded").height(maxHeight);
             } else {
                 $(".number-first").next().height(initialHeight1);
                 $(".number-second").next().height(initialHeight2);
                 $(".number-third").next().height(initialHeight3);
             }
-        });
+        }
+
+        $(document).ready(updateColumnsSize);
+        $(window).on("resize", updateColumnsSize);
+
+
 
 
 
