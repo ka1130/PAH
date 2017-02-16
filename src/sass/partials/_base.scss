@@ -5,7 +5,18 @@ body {
     font-family: 'Futura PT', Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-style: normal;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    .row {
+        margin: 0 -15px 0 0;
+    }
 }
 
 .section-blue {
