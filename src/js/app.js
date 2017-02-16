@@ -144,7 +144,7 @@
             var myId = $(this).attr("href");
 
             $("html, body").animate({
-                scrollTop: $(myId).offset().top - 60
+                scrollTop: $(myId).offset().top - 58
             }, 200);
         });
 
