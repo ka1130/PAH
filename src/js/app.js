@@ -121,6 +121,7 @@
                 fixed.css({ "background": "none" });
             }
         }
+
         scrollMenu();
 
         $(document).on("scroll", scrollMenu);
@@ -159,6 +160,13 @@
             }
         });
 
+        //Well positioning
+        // var well = $("img[alt='well-illustration']");
+        // var water = well.next();
+
+        // water.css('margin-left', well.outerWidth() + 73 + 'px');
+        // water.css('margin-bottom', well.outerHeight() - 10 + 'px');
+
         //Equal height of columns
         if (device.matches) {
             var heights = $(".frame-rounded").map(function() {
@@ -169,6 +177,18 @@
 
             $(".frame-rounded").height(maxHeight);
         }
+
+        window.addEventListener("resize", function(event) {
+            if (device.matches) {
+                var heights = $(".frame-rounded").map(function() {
+                        return $(this).height();
+                    }).get(),
+
+                    maxHeight = Math.max.apply(null, heights);
+
+                $(".frame-rounded").height(maxHeight);
+            }
+        });
 
 
 

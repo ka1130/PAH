@@ -25,6 +25,7 @@
     img {
         display: block;
         margin: 0 auto;
+        position: relative;
         @media screen and (min-width: 769px) {
             display: inline-block;
             float: left;
@@ -105,18 +106,26 @@
 }
 
 .img-container {
-    position: relative;
     &.img-container-first {
         margin-top: -20px;
     }
 }
 
+.well-container {
+    @media screen and (max-width: 768px) {
+        width: 190px;
+        height: 249.72px;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
 .water {
-    width: 145px;
-    left: 221px;
-    bottom: 85px;
-    height: 0;
     position: absolute;
+    width: 147px;
+    left: 18px;
+    bottom: 7px;
+    height: 0;
     background-color: #fff;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
