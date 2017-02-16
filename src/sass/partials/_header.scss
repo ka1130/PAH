@@ -188,6 +188,15 @@ header {
     bottom: 60px;
     left: 50%;
     transform: translate(-50%, 0);
+    display: block;
+    color: $color-neutral;
+    &:hover,
+    &:link,
+    &:visited,
+    &:active {
+        text-decoration: none;
+        color: $color-neutral;
+    }
     @media screen and (min-width: 769px) {
         display: none;
     }
