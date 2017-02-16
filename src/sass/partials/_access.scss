@@ -59,7 +59,8 @@ iframe {
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
-    margin: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
     @media screen and (min-width: 769px) {
         width: 550px;
         height: 305px;
