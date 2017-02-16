@@ -175,50 +175,37 @@
         var initialHeight1;
         var initialHeight2;
         var initialHeight3;
+        var column1 = document.querySelectorAll(".frame-rounded")[0];
+        var column2 = document.querySelectorAll(".frame-rounded")[1];
+        var column3 = document.querySelectorAll(".frame-rounded")[2];
 
         if (!deviceBigger.matches) {
-            initialHeight1 = $(".number-first").next().height();
-            initialHeight2 = $(".number-second").next().height();
-            initialHeight3 = $(".number-third").next().height();
+            initialHeight1 = column1.style.height;
+            initialHeight2 = column2.style.height;
+            initialHeight3 = column3.style.height;
         }
 
-        window.addEventListener("resize", function(event) {
-            if (!deviceBigger.matches) {
-                initialHeight1 = $(".number-first").next().height();
-                initialHeight2 = $(".number-second").next().height();
-                initialHeight3 = $(".number-third").next().height();
-            }
-        });
-
-        if (deviceBigger.matches) {
-            var heights = $(".frame-rounded").map(function() {
-                    return $(this).height();
-                }).get(),
-
-                maxHeight = Math.max.apply(null, heights);
-
-            $(".frame-rounded").height(maxHeight);
-        } else {
-            $(".number-first").next().height(initialHeight1);
-            $(".number-second").next().height(initialHeight2);
-            $(".number-third").next().height(initialHeight3);
-        }
-
-
-        window.addEventListener("resize", function(event) {
+        function updateColumnsSize() {
             if (deviceBigger.matches) {
-                var heights = $(".frame-rounded").map(function() {
-                        return $(this).height();
-                    }).get(),
 
-                    maxHeight = Math.max.apply(null, heights);
-                $(".frame-rounded").height(maxHeight);
+                var highestBox = 0;
+                $(".frame-rounded").each(function() {
+                    if ($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+                });
+                $(".frame-rounded").height(highestBox);
             } else {
-                $(".number-first").next().height(initialHeight1);
-                $(".number-second").next().height(initialHeight2);
-                $(".number-third").next().height(initialHeight3);
+                column1.style.height = initialHeight1;
+                column2.style.height = initialHeight2;
+                column3.style.height = initialHeight3;
             }
-        });
+        }
+
+        $(document).ready(updateColumnsSize);
+        $(window).on("resize", updateColumnsSize);
+
+
 
 
 
