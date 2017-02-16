@@ -160,13 +160,6 @@
             }
         });
 
-        //Well positioning
-        // var well = $("img[alt='well-illustration']");
-        // var water = well.next();
-
-        // water.css('margin-left', well.outerWidth() + 73 + 'px');
-        // water.css('margin-bottom', well.outerHeight() - 10 + 'px');
-
         //Equal height of columns
         if (device.matches) {
             var heights = $(".frame-rounded").map(function() {
@@ -187,6 +180,7 @@
                     maxHeight = Math.max.apply(null, heights);
 
                 $(".frame-rounded").height(maxHeight);
+                $(".frame-rounded").css({ "padding-bottom": "20px" });
             }
         });
 
