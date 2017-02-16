@@ -188,13 +188,12 @@ header {
     bottom: 60px;
     left: 50%;
     transform: translate(-50%, 0);
-    cursor: pointer;
     display: block;
     color: $color-neutral;
     &:hover,
     &:link,
-    &:active,
-    &:visited {
+    &:visited,
+    &:active {
         text-decoration: none;
         color: $color-neutral;
     }
