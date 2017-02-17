@@ -56,10 +56,10 @@ iframe {
 
 .iframe-container {
     position: relative;
-    height: 0;
+    height: auto;
     overflow: hidden;
     padding-bottom: 56.25%;
-    margin: 0;
+    margin: 0 20px;
     box-sizing: border-box;
     @media screen and (min-width: 769px) {
         width: 550px;

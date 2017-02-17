@@ -6,7 +6,7 @@ header {
     height: 555px;
     position: relative;
     @media screen and (min-width: 768px) {}
-    background-position: center center;
+    background-position: left center;
     h3 {
         color: #fff;
         font-size: 1.85em; //1em = 14px
@@ -55,7 +55,7 @@ header {
     z-index: 110;
     background-color: $color-main;
     overflow-y: hidden;
-    transition: 0.5s;
+    transition: height 0.5s;
     float: right;
     top: 0;
     right: 0;
