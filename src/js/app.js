@@ -25,6 +25,20 @@
         }
 
 
+        //Get rid of blinking menu
+        function toggleTransition() {
+            if (device.matches) {
+                nav.classList.add("notransition");
+            } else {
+                nav.classList.remove("notransition");
+            }
+        }
+
+        toggleTransition();
+
+        window.addEventListener("resize", toggleTransition, false);
+
+
         // Trigger click on menu (bigger screens)
         $(".hover-line").on("click", function(event) {
             window.location.href = $(this).next("a").attr("href");
