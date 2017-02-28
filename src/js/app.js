@@ -216,6 +216,7 @@
             }
         }
 
+        updateColumnsSize();
         $(document).ready(updateColumnsSize);
         $(window).on("resize", updateColumnsSize);
 
