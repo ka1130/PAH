@@ -130,7 +130,7 @@
         const fixed = $(".fixed-menu");
 
         function scrollMenu(event) {
-            if ($(window).scrollTop() > 150) {
+            if ($(window).scrollTop() > 100) {
                 fixed.css({ "background-color": "#006fb9" });
             } else {
                 fixed.css({ "background": "none" });
