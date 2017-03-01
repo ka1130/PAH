@@ -8,9 +8,10 @@ var useref = require("gulp-useref");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
 var imagemin = require("gulp-imagemin");
+var runSequence = require("run-sequence");
 
 gulp.task("sass", function() {
-    gulp.src("src/sass/main.scss")
+    return gulp.src("src/sass/main.scss")
         .pipe(plumber())
         .pipe(sass.sync())
         .pipe(autoprefixer({
@@ -32,7 +33,7 @@ gulp.task("watch", function() {
 });
 
 gulp.task("clean", function() {
-    del("dist/");
+    return del("dist/");
 });
 
 gulp.task("minify", function() {
@@ -52,11 +53,28 @@ gulp.task("compress", function(cb) {
 });
 
 gulp.task("img", function() {
-    gulp.src("src/img/*", {
-            base: "src/"
+    return gulp.src("dist/img/*", {
+            base: "dist"
         })
         .pipe(imagemin())
         .pipe(gulp.dest("dist/"));
+});
+
+gulp.task("copy", function() {
+    return gulp.src(["src/fonts/*", "src/img/*"], {
+            base: "src"
+        })
+        .pipe(gulp.dest("dist"));
+});
+
+gulp.task("build", function(cb) {
+    runSequence("clean", "minify", "compress", "copy", "img", cb);
+});
+
+gulp.task("build:server", ["build"], function() {
+    browserSync.init({
+        server: "dist/"
+    });
 });
 
 gulp.task("default", ["sass", "server", "watch"]);
