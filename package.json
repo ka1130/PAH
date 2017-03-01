@@ -1,8 +1,8 @@
 {
   "name": "pah",
   "version": "1.0.0",
-  "description": "website for Polska Akcja Humanitarna (Polish Humanitarian Action)",
-  "main": "gulpfile.js",
+  "description": "Website for Polska Akcja Humanitarna (Polish Humanitarian Action)",
+  "main": "index.js",
   "dependencies": {
     "animate.css": "^3.5.2",
     "gulp-jshint": "^2.0.4",
@@ -12,13 +12,17 @@
     "jshint": "^2.9.4"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-imagemin": "^3.1.1",
     "gulp-jshint": "^2.0.4",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-useref": "^3.1.2",
     "jshint": "^2.9.4"
   },
   "scripts": {
@@ -28,10 +32,6 @@
     "type": "git",
     "url": "git+https://github.com/ka1130/PAH.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ka1130/PAH/issues"
-  },
-  "homepage": "https://github.com/ka1130/PAH#readme"
+  "author": "Kamila Matla-Tomczyk",
+  "license": "ISC"
 }
