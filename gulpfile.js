@@ -1,20 +1,23 @@
 var gulp = require("gulp");
-var sass = require("gulp-sass");
-var autoprefixer = require("gulp-autoprefixer");
-var plumber = require("gulp-plumber");
+var $ = require("gulp-load-plugins")({
+    lazy: true
+});
+// var sass = require("gulp-sass");
+// var autoprefixer = require("gulp-autoprefixer");
+// var plumber = require("gulp-plumber");
 var browserSync = require("browser-sync");
 var del = require("del");
-var useref = require("gulp-useref");
-var uglify = require("gulp-uglify");
+// var useref = require("gulp-useref");
+// var uglify = require("gulp-uglify");
 var pump = require("pump");
-var imagemin = require("gulp-imagemin");
+// var imagemin = require("gulp-imagemin");
 var runSequence = require("run-sequence");
 
 gulp.task("sass", function() {
     return gulp.src("src/sass/main.scss")
-        .pipe(plumber())
-        .pipe(sass.sync())
-        .pipe(autoprefixer({
+        .pipe($.plumber())
+        .pipe($.sass.sync())
+        .pipe($.autoprefixer({
             browsers: ["last 5 version", "IE 9"]
         }))
         .pipe(gulp.dest("src/css/"))
@@ -38,7 +41,7 @@ gulp.task("clean", function() {
 
 gulp.task("minify", function() {
     gulp.src("src/*.html")
-        .pipe(useref())
+        .pipe($.useref())
         .pipe(gulp.dest("dist/"));
 });
 
@@ -56,7 +59,7 @@ gulp.task("img", function() {
     return gulp.src("dist/img/*", {
             base: "dist"
         })
-        .pipe(imagemin())
+        .pipe($.imagemin())
         .pipe(gulp.dest("dist/"));
 });
 
