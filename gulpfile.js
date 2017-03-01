@@ -6,10 +6,8 @@ var browserSync = require("browser-sync");
 var del = require("del");
 var useref = require("gulp-useref");
 var uglify = require("gulp-uglify");
-
-gulp.task("hello", function() {
-    console.log("hello");
-});
+var pump = require("pump");
+var imagemin = require("gulp-imagemin");
 
 gulp.task("sass", function() {
     gulp.src("src/sass/main.scss")
@@ -40,7 +38,24 @@ gulp.task("clean", function() {
 gulp.task("minify", function() {
     gulp.src("src/*.html")
         .pipe(useref())
-        .pipe(uglify())
+        .pipe(gulp.dest("dist/"));
+});
+
+gulp.task("compress", function(cb) {
+    pump([
+            gulp.src("src/js/*.js"),
+            uglify(),
+            gulp.dest("dist")
+        ],
+        cb
+    );
+});
+
+gulp.task("img", function() {
+    gulp.src("src/img/*", {
+            base: "src/"
+        })
+        .pipe(imagemin())
         .pipe(gulp.dest("dist/"));
 });
 
