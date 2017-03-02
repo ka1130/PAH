@@ -39,7 +39,7 @@ gulp.task("clean", function() {
     return del("dist/");
 });
 
-gulp.task("minify", function() {
+gulp.task("concat", function() {
     gulp.src("src/*.html")
         .pipe($.useref())
         .pipe(gulp.dest("dist/"));
@@ -71,7 +71,7 @@ gulp.task("copy", function() {
 });
 
 gulp.task("build", function(cb) {
-    runSequence("clean", "minify", "compress", "copy", "img", cb);
+    runSequence("clean", "concat", "compress", "copy", "img", cb);
 });
 
 gulp.task("build:server", ["build"], function() {
